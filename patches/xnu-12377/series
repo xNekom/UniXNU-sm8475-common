@@ -8,6 +8,7 @@
 # zzz-boot-progress.patch uses as context. XNU_SHENG_PMGR is unset on
 # mondrian, so the hook compiles out; the hunk is still required.
 sheng-platform-power.patch
-# CPU numbering: SM8450/SM8475 report the core in Affinity1, so start.s must
-# mask 16 bits when it runs the BCM2837 (4 KiB) machine config.
+# CPU numbering: SM8450 numbers the core in Affinity1; SM8475's MPIDRs are
+# flat 0x000..0x700 and fit the same 16-bit mask. start.s must mask 16 bits
+# when it runs the BCM2837 (4 KiB) machine config.
 native-smp-secondary.patch
