@@ -29,7 +29,8 @@ commit = "<40-character commit>"
 | `soc.toml` | SoC identity, source reference, component selection |
 | `configs/sm8475.config` | platform switches shared by every board |
 | `dts/sm8475.dtsi` | CPUs, PSCI conduit, GICv3 distributor and redistributor |
-| `patches/xnu/series` | XNU patches that belong to the SoC layer |
+| `patches/xnu/series` | XNU patches that belong to the SoC layer (xnu-8796, iOS 16 line) |
+| `patches/xnu-12377/series` | the same for the arm64e line (iOS 27.0.1 / Darwin 26 calls) |
 
 Board files include `sm8475.dtsi` and add memory, peripherals and the Apple
 identity; the device repository owns those.

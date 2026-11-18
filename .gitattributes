@@ -1,0 +1,11 @@
+# A patch applied on the Linux/macOS build host must not carry CRLF: git apply
+# rejects the context. Keep the series and the patches LF in the index and in
+# every checkout, including the Windows one.
+*.patch text eol=lf
+*.dts text eol=lf
+*.dtsi text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+* text=auto eol=lf
